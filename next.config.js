@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const debug = process.env.NODE_ENV !== "production";
 
-module.exports = nextConfig
+const nextConfig = {
+  basePath: !debug ? "/hyper" : "",
+  reactStrictMode: true,
+  images: {
+    path: "/",
+    loader: "imgix",
+  },
+};
+
+module.exports = nextConfig;
