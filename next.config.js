@@ -1,13 +1,10 @@
 /** @type {import('next').NextConfig} */
-const debug = process.env.NODE_ENV !== "production";
+const { prefix } = "./utils/prefix";
 
 const nextConfig = {
-  basePath: !debug ? "/hyper" : "",
   reactStrictMode: true,
-  images: {
-    path: "/",
-    loader: "imgix",
-  },
+  basePath: prefix,
+  assetPrefix: prefix,
 };
 
 module.exports = nextConfig;
