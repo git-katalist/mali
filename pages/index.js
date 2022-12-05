@@ -14,6 +14,7 @@ export default function Home() {
         <h4>hello my beautiful world!</h4>
         <p>What's up my dude</p>
         <p>Let's say goodbye</p>
+        <h1>Kingsman</h1>
         <img src={`${prefix}/favicon.ico`} alt="hey" />
       </main>
     </>
